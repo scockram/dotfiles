@@ -1,0 +1,8 @@
+[user]
+	name = Steve Cockram
+	email = stevejohncockram@gmail.com
+[alias]
+  slog = "log --pretty=format:'%h (%an, %ar) %s'"
+  ss = "!_() { git log $(git merge-base HEAD master)..HEAD --pretty=format:'%h (%an, %ar) %s'; }; _"
+  # Number of things changed in this feature branch
+  sloc = "!_() { git diff $(git merge-base HEAD master)..HEAD | grep '^[+|-][^+-]' | wc -l; }; _"
